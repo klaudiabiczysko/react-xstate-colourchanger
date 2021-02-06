@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/react-xstate-colourchanger/static/css/main.26955afe.chunk.css",
-    "main.js": "/react-xstate-colourchanger/static/js/main.2c5550e7.chunk.js",
-    "main.js.map": "/react-xstate-colourchanger/static/js/main.2c5550e7.chunk.js.map",
-    "runtime-main.js": "/react-xstate-colourchanger/static/js/runtime-main.04659b03.js",
-    "runtime-main.js.map": "/react-xstate-colourchanger/static/js/runtime-main.04659b03.js.map",
-    "static/js/2.6018119e.chunk.js": "/react-xstate-colourchanger/static/js/2.6018119e.chunk.js",
-    "static/js/2.6018119e.chunk.js.map": "/react-xstate-colourchanger/static/js/2.6018119e.chunk.js.map",
-    "index.html": "/react-xstate-colourchanger/index.html",
-    "static/css/main.26955afe.chunk.css.map": "/react-xstate-colourchanger/static/css/main.26955afe.chunk.css.map",
-    "static/js/2.6018119e.chunk.js.LICENSE.txt": "/react-xstate-colourchanger/static/js/2.6018119e.chunk.js.LICENSE.txt"
+    "main.css": "/lt2216-assign2/static/css/main.26955afe.chunk.css",
+    "main.js": "/lt2216-assign2/static/js/main.2c5550e7.chunk.js",
+    "main.js.map": "/lt2216-assign2/static/js/main.2c5550e7.chunk.js.map",
+    "runtime-main.js": "/lt2216-assign2/static/js/runtime-main.2ff2d77c.js",
+    "runtime-main.js.map": "/lt2216-assign2/static/js/runtime-main.2ff2d77c.js.map",
+    "static/js/2.6018119e.chunk.js": "/lt2216-assign2/static/js/2.6018119e.chunk.js",
+    "static/js/2.6018119e.chunk.js.map": "/lt2216-assign2/static/js/2.6018119e.chunk.js.map",
+    "index.html": "/lt2216-assign2/index.html",
+    "static/css/main.26955afe.chunk.css.map": "/lt2216-assign2/static/css/main.26955afe.chunk.css.map",
+    "static/js/2.6018119e.chunk.js.LICENSE.txt": "/lt2216-assign2/static/js/2.6018119e.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.04659b03.js",
+    "static/js/runtime-main.2ff2d77c.js",
     "static/js/2.6018119e.chunk.js",
     "static/css/main.26955afe.chunk.css",
     "static/js/main.2c5550e7.chunk.js"
