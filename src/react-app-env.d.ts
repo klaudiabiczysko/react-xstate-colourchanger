@@ -7,6 +7,7 @@ interface SDSContext {
     nluData: any;
     ttsAgenda: string;
     person: string,
+    activity: string,
 
 }
 
