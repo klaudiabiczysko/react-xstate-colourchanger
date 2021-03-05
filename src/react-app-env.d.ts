@@ -13,6 +13,7 @@ interface SDSContext {
 
 type SDSEvent =
     | { type: 'CLICK' }
+    | { type: 'MAXSPEECH' }
     | { type: 'RECOGNISED' }
     | { type: 'ASRRESULT', value: string }
     | { type: 'ENDSPEECH' }
