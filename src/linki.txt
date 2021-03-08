@@ -1,5 +1,0 @@
-https://github.com/klaudiabiczysko/react-xstate-colourchanger.git
-
-https://github.com/klaudiabiczysko/rasa-heroku.git
-
-https://klaudiabiczysko.github.io/react-xstate-colourchanger/

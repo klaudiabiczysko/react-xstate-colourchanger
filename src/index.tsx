@@ -4,9 +4,9 @@ import * as ReactDOM from "react-dom";
 import { Machine, assign, send, State } from "xstate";
 import { useMachine, asEffect } from "@xstate/react";
 import { inspect } from "@xstate/inspect";
-import { dmMachine } from "./dmAppointment";
-
-
+import { dmMenu } from "./dmMenu"; 
+//import { dmMachine } from "./dmSmarthome"; 
+//import { dmMachine } from "./dmAppointment";
 inspect({
     url: "https://statecharts.io/inspect",
     iframe: false
@@ -14,12 +14,13 @@ inspect({
 
 import { useSpeechSynthesis, useSpeechRecognition } from 'react-speech-kit';
 
+
 const machine = Machine<SDSContext, any, SDSEvent>({
     id: 'root',
     type: 'parallel',
     states: {
         dm: {
-            ...dmMachine
+            ...dmMenu  //dmMachine if dmSmarthome or dmAppointment
         },
         asrtts: {
             initial: 'idle',
@@ -34,6 +35,7 @@ const machine = Machine<SDSContext, any, SDSEvent>({
                     }
                 },
                 recognising: {
+                    initial: 'progress',
                     entry: 'recStart',
                     exit: 'recStop',
                     on: {
@@ -42,9 +44,12 @@ const machine = Machine<SDSContext, any, SDSEvent>({
                                 assign((_context, event) => { return { recResult: event.value } })],
                             target: '.match'
                         },
-                        RECOGNISED: 'idle'
+                        RECOGNISED: 'idle',
+                        MAXSPEECH: 'idle',
                     },
                     states: {
+                        progress: {
+                        },
                         match: {
                             entry: send('RECOGNISED'),
                         },
@@ -135,6 +140,9 @@ function App() {
                 console.log('Repainting...');
                 document.body.style.background = context.recResult;
             }),
+            changeAction: asEffect((context) => {
+                console.log('Action performed');
+            }),
             ttsStart: asEffect((context, effect) => {
                 console.log('Speaking...');
                 speak({ text: context.ttsAgenda })
@@ -159,10 +167,11 @@ function App() {
 };
 
 
+
 /* RASA API
  *  */
 const proxyurl = "https://cors-anywhere.herokuapp.com/";
-const rasaurl = 'https://dmappointment.herokuapp.com/model/parse'
+const rasaurl = 'https://rasa-nlu-api-00.herokuapp.com/model/parse'
 const nluRequest = (text: string) =>
     fetch(new Request(proxyurl + rasaurl, {
         method: 'POST',

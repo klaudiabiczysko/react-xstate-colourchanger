@@ -6,8 +6,15 @@ interface SDSContext {
     recResult: string;
     nluData: any;
     ttsAgenda: string;
-    person: string,
-    activity: string,
+    query: string;
+    person: string;
+    day: string;
+    time: string;
+    snippet: string;
+    prompt: string;
+    reprompt: string;
+    count: any;
+    bool: boolean
 
 }
 
